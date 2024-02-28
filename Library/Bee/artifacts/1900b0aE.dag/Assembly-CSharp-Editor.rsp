@@ -368,12 +368,12 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -analyzer:"D:/unity/Unity Setup/2022.3.11f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"D:/unity/Unity Setup/2022.3.11f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
-"Assets/CoffeeShopStarterPack/Scripts/Editor/BewerageMakerEditor.cs"
-"Assets/CoffeeShopStarterPack/Scripts/Editor/ProductEditor.cs"
-"Assets/CoffeeShopStarterPack/Scripts/Editor/ProductManagerEditor.cs"
-"Assets/CoffeeShopStarterPack/Scripts/Editor/ScreenShotHelperEditor.cs"
-"Assets/CoffeeShopStarterPack/Scripts/Editor/ScreenShotImportSettings.cs"
-"Assets/CoffeeShopStarterPack/Scripts/Editor/SliceHelperEditor.cs"
+"Assets/Model Asset/CoffeeShopStarterPack/Scripts/Editor/BewerageMakerEditor.cs"
+"Assets/Model Asset/CoffeeShopStarterPack/Scripts/Editor/ProductEditor.cs"
+"Assets/Model Asset/CoffeeShopStarterPack/Scripts/Editor/ProductManagerEditor.cs"
+"Assets/Model Asset/CoffeeShopStarterPack/Scripts/Editor/ScreenShotHelperEditor.cs"
+"Assets/Model Asset/CoffeeShopStarterPack/Scripts/Editor/ScreenShotImportSettings.cs"
+"Assets/Model Asset/CoffeeShopStarterPack/Scripts/Editor/SliceHelperEditor.cs"
 -langversion:9.0
 
 /deterministic
