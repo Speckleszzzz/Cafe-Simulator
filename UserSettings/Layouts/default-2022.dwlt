@@ -121,7 +121,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 18
+  controlID: 130
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 19
+  controlID: 27
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -820,9 +820,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -224.26918, y: 71.0451, z: -4.0809965}
+    m_Target: {x: -249.45584, y: 74.45213, z: 4.793374}
     speed: 2
-    m_Value: {x: -224.26918, y: 71.0451, z: -4.0809965}
+    m_Value: {x: -249.43773, y: 74.446915, z: 4.75698}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -868,13 +868,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.08210694, y: -0.3770608, z: 0.033550806, w: 0.92198825}
+    m_Target: {x: 0.07037356, y: 0.5567958, z: 0.04785073, w: -0.8264401}
     speed: 2
-    m_Value: {x: 0.08225279, y: -0.3728886, z: 0.033179253, w: 0.9236275}
+    m_Value: {x: 0.07284243, y: 0.55657536, z: 0.04951491, w: -0.8261151}
   m_Size:
-    m_Target: 1.55643
+    m_Target: 2.221766
     speed: 2
-    m_Value: 1.4894067
+    m_Value: 2.3264565
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1006,9 +1006,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 800dfeff
-      m_LastClickedID: -127616
-      m_ExpandedIDs: d2faffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 32fbfffffa8b0000c8b60000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1077,7 +1077,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/CoffeeShopStarterPack/Prefabs
+    - Assets/DenysAlmaral/CityPeopleLite/Prefabs
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1085,16 +1085,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 50
   m_LastFolders:
-  - Assets/CoffeeShopStarterPack/Prefabs
+  - Assets/DenysAlmaral/CityPeopleLite/Prefabs
   m_LastFoldersGridSize: 50
   m_LastProjectPath: D:\market Simulator\Cafe Simulator\Cafe-Simulator
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 20ea0000
-    m_LastClickedID: 59936
-    m_ExpandedIDs: 000000000ce900000ee9000010e9000012e9000000ca9a3b
+    m_SelectedIDs: 2ceb0000
+    m_LastClickedID: 60204
+    m_ExpandedIDs: 000000007ce900007ee9000080e9000082e9000072ea000020eb000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1122,7 +1122,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000ce900000ee9000010e9000012e90000
+    m_ExpandedIDs: 000000007ce900007ee9000080e9000082e90000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1174,7 +1174,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 793}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 50
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 132

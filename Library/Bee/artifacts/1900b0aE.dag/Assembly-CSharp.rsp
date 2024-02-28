@@ -378,7 +378,9 @@
 "Assets/CoffeeShopStarterPack/Scripts/Utilities/BasicGameEvents.cs"
 "Assets/CoffeeShopStarterPack/Scripts/Utilities/ScreenShotHelper.cs"
 "Assets/CoffeeShopStarterPack/Scripts/Utilities/SliceHelper.cs"
-"Assets/DenysAlmaral/CityPeopleLite/Demo_Scenes/Scripts/CityPeople.cs"
+"Assets/Scripts/CityPeople.cs"
+"Assets/Scripts/Player/MouseLook.cs"
+"Assets/Scripts/Player/PlayerMovement.cs"
 -langversion:9.0
 
 /deterministic
