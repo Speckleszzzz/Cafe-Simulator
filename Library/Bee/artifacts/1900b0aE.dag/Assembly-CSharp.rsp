@@ -384,6 +384,7 @@
 "Assets/Model Asset/CoffeeShopStarterPack/Scripts/Utilities/SliceHelper.cs"
 "Assets/Scripts/CityPeople.cs"
 "Assets/Scripts/Npc/NPCController.cs"
+"Assets/Scripts/Npc/NPCSpawner.cs"
 "Assets/Scripts/Player/MouseLook.cs"
 "Assets/Scripts/Player/ObjectGrabable.cs"
 "Assets/Scripts/Player/PlayerMovement.cs"
