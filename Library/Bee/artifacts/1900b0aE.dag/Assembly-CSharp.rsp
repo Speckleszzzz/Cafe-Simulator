@@ -390,6 +390,7 @@
 "Assets/Scripts/Player/PlayerMovement.cs"
 "Assets/Scripts/Player/PlayerPickUpDrop.cs"
 "Assets/Scripts/Shop/ButtonCanvasController.cs"
+"Assets/Scripts/Shop/DraggableObject.cs"
 "Assets/Scripts/Shop/ShopItemSO.cs"
 "Assets/Scripts/Shop/ShopManager.cs"
 "Assets/Scripts/Shop/ShopTemplate.cs"

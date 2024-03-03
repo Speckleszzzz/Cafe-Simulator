@@ -4,6 +4,7 @@ using UnityEngine.AI;
 public class NPCSpawner : MonoBehaviour
 {
     public GameObject[] characterPrefabs;
+    public GameObject[] shopPrefabs; 
     public Transform spawnPoint;
     public Transform[] initialWaypoints;
     public Transform[] finalWaypoints;
@@ -12,10 +13,12 @@ public class NPCSpawner : MonoBehaviour
     private int currentWaypointIndex = 0;
     private bool reachedFirstWaypoint = false;
     private bool waitingForPlayerInput = false;
+    private string desiredItemName; 
 
     void Start()
     {
         SpawnCharacter();
+        Debug.Log("Desired Item Name: " + desiredItemName);
     }
 
     void SpawnCharacter()
@@ -37,6 +40,18 @@ public class NPCSpawner : MonoBehaviour
         agent.SetDestination(waypoints[currentWaypointIndex].position);
     }
 
+    public string GetDesiredItemName()
+    {
+        return desiredItemName;
+    }
+
+    public void NotifyItemCollected()
+    {
+        waitingForPlayerInput = false;
+        currentWaypointIndex = 0;
+        MoveToNextWaypoint(finalWaypoints);
+    }
+
     void Update()
     {
         if (!reachedFirstWaypoint)
@@ -52,6 +67,11 @@ public class NPCSpawner : MonoBehaviour
                 {
                     reachedFirstWaypoint = true;
                     waitingForPlayerInput = true;
+
+                    int randomItemIndex = Random.Range(0, shopPrefabs.Length);
+                    GameObject selectedObject = shopPrefabs[randomItemIndex];
+                    desiredItemName = selectedObject.name;
+                    Debug.Log("NPC wants: " + desiredItemName);
                 }
             }
         }
@@ -59,9 +79,12 @@ public class NPCSpawner : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                waitingForPlayerInput = false;
-                currentWaypointIndex = 0;
-                MoveToNextWaypoint(finalWaypoints);
+                if (currentWaypointIndex == finalWaypoints.Length - 1)
+                {
+                    waitingForPlayerInput = false;
+                    currentWaypointIndex = 0;
+                    MoveToNextWaypoint(finalWaypoints);
+                }
             }
         }
         else
