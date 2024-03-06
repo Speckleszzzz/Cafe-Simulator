@@ -2,31 +2,26 @@ using UnityEngine;
 
 public class DraggableObject : MonoBehaviour
 {
-    public string itemName;
+    public int itemId; 
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Foods"))
         {
-            string itemNameEntering = other.gameObject.name;
-            string desiredItemName = itemName;
+            int itemIdEntering = other.gameObject.GetComponent<FoodIdentifier>().GetFoodId(); 
             NPCSpawner spawner = FindObjectOfType<NPCSpawner>(); 
             
-            Debug.Log("Desired Item Name: " + desiredItemName);
-            Debug.Log("Entering Item Name: " + itemNameEntering);
+            Debug.Log("Desired Item ID: " + itemId);
+            Debug.Log("Entering Item ID: " + itemIdEntering);
             
-            if (spawner != null && desiredItemName.Equals(itemNameEntering, System.StringComparison.OrdinalIgnoreCase)) 
+            if (spawner != null && itemId == itemIdEntering) 
             {
-                spawner.NotifyItemCollected(); 
-                
-                // Destroying the object entering the collider
-                Destroy(other.gameObject); 
-                
-                Debug.Log("Correct item collected: " + desiredItemName + " (Entering: " + itemNameEntering + ")");
+                spawner.CheckItemCorrectness(itemIdEntering); 
+                Destroy(other.gameObject);
             }
             else
             {
-                Debug.Log("Incorrect item collected: " + desiredItemName + " (Entering: " + itemNameEntering + ")");
+                Debug.Log("Incorrect item collected!");
             }
         }
     }

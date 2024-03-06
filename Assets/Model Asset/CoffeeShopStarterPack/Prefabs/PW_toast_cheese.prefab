@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 4315566473903498}
   - component: {fileID: 4547234368011236002}
   - component: {fileID: 1940693899483938148}
+  - component: {fileID: 6052619343109491411}
   m_Layer: 8
   m_Name: PW_toast_cheese
   m_TagString: Foods
@@ -288,6 +289,19 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6052619343109491411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497431664766396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 822d794da2266ae47bb857d5b95b4a79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodId: 20
 --- !u!1 &1635954399707558
 GameObject:
   m_ObjectHideFlags: 0

@@ -330,6 +330,7 @@ GameObject:
   - component: {fileID: -3418863553791189676}
   - component: {fileID: -188293948315870463}
   - component: {fileID: -6227040943729644140}
+  - component: {fileID: -1262032165956618917}
   m_Layer: 8
   m_Name: PW_frenchtoast_olives
   m_TagString: Foods
@@ -417,6 +418,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &-1262032165956618917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629246849703556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 822d794da2266ae47bb857d5b95b4a79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodId: 16
 --- !u!1 &1988272831585470
 GameObject:
   m_ObjectHideFlags: 0

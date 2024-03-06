@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -4823359555255457345}
   - component: {fileID: -3779354063440719128}
   - component: {fileID: -2715854263479195051}
+  - component: {fileID: -6435904153375840680}
   m_Layer: 8
   m_Name: PW_frenchtoas_cherry_tomato
   m_TagString: Foods
@@ -99,6 +100,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &-6435904153375840680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000415426235750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 822d794da2266ae47bb857d5b95b4a79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodId: 14
 --- !u!1 &1109421544171522
 GameObject:
   m_ObjectHideFlags: 0

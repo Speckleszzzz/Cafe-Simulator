@@ -4,21 +4,23 @@ using UnityEngine.AI;
 public class NPCSpawner : MonoBehaviour
 {
     public GameObject[] characterPrefabs;
-    public GameObject[] shopPrefabs; 
+    public GameObject[] shopPrefabs;
     public Transform spawnPoint;
     public Transform[] initialWaypoints;
     public Transform[] finalWaypoints;
     private GameObject spawnedCharacter;
     private NavMeshAgent agent;
     private int currentWaypointIndex = 0;
-    private bool reachedFirstWaypoint = false;
+    private bool reachedFinalInitialWaypoint = false;
     private bool waitingForPlayerInput = false;
-    private string desiredItemName; 
+    private int desiredFoodId;
+    private bool itemCorrect = false;
+    public FoodManager foodManager; 
+    public levelupstats levelUpStats; 
 
     void Start()
     {
         SpawnCharacter();
-        Debug.Log("Desired Item Name: " + desiredItemName);
     }
 
     void SpawnCharacter()
@@ -40,21 +42,68 @@ public class NPCSpawner : MonoBehaviour
         agent.SetDestination(waypoints[currentWaypointIndex].position);
     }
 
-    public string GetDesiredItemName()
+    public void SetDesiredFoodId(int foodId)
     {
-        return desiredItemName;
+        desiredFoodId = foodId;
     }
 
     public void NotifyItemCollected()
     {
-        waitingForPlayerInput = false;
-        currentWaypointIndex = 0;
-        MoveToNextWaypoint(finalWaypoints);
+        if (reachedFinalInitialWaypoint && waitingForPlayerInput)
+        {
+            currentWaypointIndex = 0;
+            MoveToNextWaypoint(finalWaypoints);
+            GiveExperience();
+            waitingForPlayerInput = false;
+        }
+    }
+
+    void GenerateDesiredItem()
+    {
+        int randomItemIndex = Random.Range(0, shopPrefabs.Length);
+        GameObject selectedObject = shopPrefabs[randomItemIndex];
+        FoodIdentifier foodIdentifier = selectedObject.GetComponent<FoodIdentifier>();
+        if (foodIdentifier != null)
+        {
+            desiredFoodId = foodIdentifier.GetFoodId();
+            Debug.Log("NPC wants food with ID: " + desiredFoodId);
+        }
+        else
+        {
+            Debug.LogError("Selected object does not have FoodIdentifier component!");
+        }
+    }
+    public void CheckItemCorrectness(int broughtFoodId)
+    {
+        Debug.Log("Desired food ID: " + desiredFoodId);
+        Debug.Log("Brought food ID: " + broughtFoodId);
+
+        if (broughtFoodId == desiredFoodId)
+        {
+            itemCorrect = true;
+            Debug.Log("Correct item brought!");
+        }
+        else
+        {
+            itemCorrect = false;
+            Debug.Log("Incorrect item brought!");
+        }
+    }
+
+    void GiveExperience()
+    {
+        float expGained = CalculateExperienceOnLeave();
+        levelUpStats.SetExperience(expGained);
+    }
+
+    float CalculateExperienceOnLeave()
+    {
+        return 5.0f;
     }
 
     void Update()
     {
-        if (!reachedFirstWaypoint)
+        if (!reachedFinalInitialWaypoint)
         {
             if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
             {
@@ -65,26 +114,24 @@ public class NPCSpawner : MonoBehaviour
                 }
                 else
                 {
-                    reachedFirstWaypoint = true;
+                    reachedFinalInitialWaypoint = true;
                     waitingForPlayerInput = true;
-
-                    int randomItemIndex = Random.Range(0, shopPrefabs.Length);
-                    GameObject selectedObject = shopPrefabs[randomItemIndex];
-                    desiredItemName = selectedObject.name;
-                    Debug.Log("NPC wants: " + desiredItemName);
+                    GenerateDesiredItem();
                 }
             }
         }
         else if (waitingForPlayerInput)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (itemCorrect)
             {
-                if (currentWaypointIndex == finalWaypoints.Length - 1)
-                {
-                    waitingForPlayerInput = false;
-                    currentWaypointIndex = 0;
-                    MoveToNextWaypoint(finalWaypoints);
-                }
+                currentWaypointIndex = 0;
+                MoveToNextWaypoint(finalWaypoints);
+                GiveExperience();
+                waitingForPlayerInput = false;
+            }
+            else
+            {
+                // Handle incorrect item brought
             }
         }
         else

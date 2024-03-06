@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -4140713826986807114}
   - component: {fileID: -4172092553125658118}
   - component: {fileID: 3276674991885155074}
+  - component: {fileID: 9102151978016947133}
   m_Layer: 8
   m_Name: PW_doughnut_pink
   m_TagString: Foods
@@ -167,6 +168,19 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 5fbda09d5185a47febf22d3176f2aa76, type: 3}
+--- !u!114 &9102151978016947133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080854471979460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 822d794da2266ae47bb857d5b95b4a79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodId: 12

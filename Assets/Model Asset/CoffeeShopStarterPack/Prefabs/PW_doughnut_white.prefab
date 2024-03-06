@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -9086842888649521019}
   - component: {fileID: -8938920678941400775}
   - component: {fileID: 6264224422323658478}
+  - component: {fileID: -8315771391166125142}
   m_Layer: 8
   m_Name: PW_doughnut_white
   m_TagString: Foods
@@ -167,6 +168,19 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 716eb86c5f9a24921a13fd6bcaa16cb1, type: 3}
+--- !u!114 &-8315771391166125142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647761561661000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 822d794da2266ae47bb857d5b95b4a79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodId: 13
