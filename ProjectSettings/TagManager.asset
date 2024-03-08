@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fluid
   - Foods
+  - Npc
   layers:
   - Default
   - TransparentFX

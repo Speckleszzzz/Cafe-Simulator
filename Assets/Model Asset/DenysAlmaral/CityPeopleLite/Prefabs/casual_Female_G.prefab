@@ -845,7 +845,7 @@ GameObject:
   - component: {fileID: -9182015390197464997}
   m_Layer: 9
   m_Name: casual_Female_G
-  m_TagString: Untagged
+  m_TagString: Npc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

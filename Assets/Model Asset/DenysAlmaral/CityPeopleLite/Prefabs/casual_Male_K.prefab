@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 4127590971174340748}
   m_Layer: 9
   m_Name: casual_Male_K
-  m_TagString: Untagged
+  m_TagString: Npc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
