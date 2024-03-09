@@ -19,8 +19,13 @@ public class SpawnerForNpc : MonoBehaviour
         SpawnNPC();
     }
 
-    void SpawnNPC()
+    public void SpawnNPC()
     {
+
+        hasReachedPointB = false;
+        hasReachedDestination = false;
+
+                
         GameObject selectedNPCPrefab = npcPrefabs[Random.Range(0, npcPrefabs.Length)];
         spawnedNPC = Instantiate(selectedNPCPrefab, spawnPoint.position, Quaternion.identity);
         agent = spawnedNPC.GetComponent<NavMeshAgent>();
@@ -47,10 +52,9 @@ public class SpawnerForNpc : MonoBehaviour
             else if (!hasReachedDestination)
             {
                 hasReachedDestination = true;
-                int randomNumber = Random.Range(1, 20); 
+                int randomNumber = Random.Range(1, 5); 
                 Debug.Log("NPC has reached the destination. Random number generated: " + randomNumber);
                 
-                // Find DragObjectToBuy script on the specified GameObject
                 DragObjectToBuy dragObjectToBuyScript = dragObjectForNPC.GetComponent<DragObjectToBuy>();
                 if (dragObjectToBuyScript != null)
                 {

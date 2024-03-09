@@ -26,8 +26,6 @@ public class ShopManager : MonoBehaviour
         LoadPanels();
         CheckPurchaseable();
     }
-
-    // Update is called once per frame
     void Update()
     {
         

@@ -6,7 +6,6 @@ public class DragObjectToBuy : MonoBehaviour
     private Collider colliderComponent; 
     public levelupstats LevelUpStats;
     public SpawnerForNpc spawnerForNpc;
-    
 
     private void Start()
     {
@@ -19,7 +18,6 @@ public class DragObjectToBuy : MonoBehaviour
         npcFoodId = foodId;
         colliderComponent.enabled = true;
         Debug.Log("NPC food ID set to: " + foodId);
-        Debug.Log("Collider enabled: " + colliderComponent.enabled);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,12 +30,18 @@ public class DragObjectToBuy : MonoBehaviour
                 Debug.Log("NPC generated number and object ID match. Object with ID " + idScript.foodId + " entered the collider and will be destroyed.");
                 Destroy(other.gameObject);
                 LevelUpStats.SetExperience(5.0f); 
-                spawnerForNpc.DestroyNPC();
+                DestroyNPCAndSpawnNew();
             }
             else
             {
                 Debug.Log("NPC generated number and object ID do not match. Object with ID " + idScript.foodId + " entered the collider.");
             }
         }
+    }
+
+    private void DestroyNPCAndSpawnNew()
+    {
+        spawnerForNpc.DestroyNPC(); // Destroy the current NPC
+        spawnerForNpc.SpawnNPC(); // Spawn a new NPC
     }
 }
