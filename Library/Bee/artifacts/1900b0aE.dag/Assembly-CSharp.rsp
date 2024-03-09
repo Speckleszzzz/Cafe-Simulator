@@ -391,6 +391,7 @@
 "Assets/Scripts/Player/ObjectGrabable.cs"
 "Assets/Scripts/Player/PlayerMovement.cs"
 "Assets/Scripts/Player/PlayerPickUpDrop.cs"
+"Assets/Scripts/Player/UnlockButton.cs"
 "Assets/Scripts/Shop/ButtonCanvasController.cs"
 "Assets/Scripts/Shop/CanvasClose.cs"
 "Assets/Scripts/Shop/ComputerInteractable.cs"
