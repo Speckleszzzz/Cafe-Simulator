@@ -3,14 +3,23 @@ using UnityEngine.UI;
 
 public class UnlockButton : MonoBehaviour
 {
-    public int buttonId; // Unique identifier for this button
+    public int buttonId; 
     private Button button;
 
     void Start()
     {
-        button = GetComponent<Button>(); // Get the Button component attached to this GameObject
+        button = GetComponent<Button>(); 
+        UpdateButtonInteractability();
+    }
 
-        // Check if levelupstats script is present
+    void Update()
+    {
+        // Update button interactability continuously
+        UpdateButtonInteractability();
+    }
+
+    void UpdateButtonInteractability()
+    {
         levelupstats levelUpStats = FindObjectOfType<levelupstats>();
         if (levelUpStats == null)
         {
@@ -18,7 +27,6 @@ public class UnlockButton : MonoBehaviour
         }
         else
         {
-            // Disable the button if the level doesn't match the buttonId
             Debug.Log("Current Level: " + levelUpStats.Level);
             Debug.Log("Button ID: " + buttonId);
             button.interactable = (levelUpStats.Level == buttonId);

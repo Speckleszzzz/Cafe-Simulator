@@ -23,6 +23,7 @@ public class ShopManager : MonoBehaviour
         LoadPanels();
         CheckPurchaseable();
         EnableNewButtons(); // Enable new buttons initially
+        LinkNewButtons(); // Link new buttons to NewButtonClicked method
     }
 
     void Update()
@@ -78,9 +79,16 @@ public class ShopManager : MonoBehaviour
             newButtonsClicked[buttonNo] = true;
             newButtons[buttonNo].gameObject.SetActive(false);
             myPurchaseButton[buttonNo].interactable = true;
-
-            // Add your custom functionality here
             Debug.Log("New button " + buttonNo + " clicked!");
+        }
+    }
+
+    void LinkNewButtons()
+    {
+        for (int i = 0; i < newButtons.Length; i++)
+        {
+            int buttonNo = i; // Need to store the current value of i for each iteration
+            newButtons[buttonNo].onClick.AddListener(() => NewButtonClicked(buttonNo));
         }
     }
 }
