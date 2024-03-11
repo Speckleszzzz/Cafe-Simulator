@@ -121,7 +121,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 3186
+  controlID: 6523
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 3024
+  controlID: 6369
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -317,7 +317,7 @@ MonoBehaviour:
   m_SerializedViewNames: []
   m_SerializedViewValues: []
   m_PlayModeViewName: GameView
-  m_ShowGizmos: 0
+  m_ShowGizmos: 1
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
   m_TargetSize: {x: 935, y: 454}
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_EnterPlayModeBehavior: 0
   m_UseMipMap: 0
   m_VSyncEnabled: 0
-  m_Gizmos: 0
+  m_Gizmos: 1
   m_Stats: 0
   m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
@@ -799,9 +799,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 154.13391, y: -19.139954, z: 237.80804}
+    m_Target: {x: -222.0181, y: 70.02104, z: -1.1510949}
     speed: 2
-    m_Value: {x: 154.13391, y: -19.139954, z: 237.80804}
+    m_Value: {x: -222.0181, y: 70.02104, z: -1.1510949}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -847,13 +847,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.26334515, y: 0.14257668, z: -0.04549921, w: -0.95362806}
+    m_Target: {x: 0.2241432, y: 0.120162055, z: -0.020810546, w: 0.9675217}
     speed: 2
-    m_Value: {x: -0.26334518, y: 0.1425767, z: -0.045499213, w: -0.9536281}
+    m_Value: {x: 0.22397624, y: 0.121539675, z: -0.021133952, w: 0.9667555}
   m_Size:
-    m_Target: 561.8941
+    m_Target: 2.0058155
     speed: 2
-    m_Value: 561.8941
+    m_Value: 2.0058155
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1004,7 +1004,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 32fbffff7c700000de7200000c7400008e7f0000c28200005a9d000048b40000f4c70000
+      m_ExpandedIDs: bad4fdff4cd9fdffbedcfdffb6eafdffbe03feff32fbffff726300005a9d0000589f0000dab50000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1250,7 +1250,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 86
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
