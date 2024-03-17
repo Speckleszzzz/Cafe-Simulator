@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e6ccb55d56f20745bbaf8e8a352a5de, type: 3}
   m_Name: shopMenu
   m_EditorClassIdentifier: 
-  title: cookie
-  description: A red vegetable I gues hahahahaha lol who knoes only me
-  baseCost: 100
-  Icon: {fileID: 21300000, guid: 33cbf0735563a4fe8a08770d84691804, type: 3}
+  title: 'Milk '
+  description: a white cream ez
+  baseCost: 10
+  Icon: {fileID: 21300000, guid: ac8ae17fabfc10442b962cd567999fa7, type: 3}
